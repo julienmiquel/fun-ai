@@ -33,17 +33,20 @@ def load_models():
         text_model_pro = GenerativeModel("gemini-pro")
     except:
         print("ERROR  GenerativeModel(gemini-pro)")
+        st.write("ERROR  GenerativeModel(gemini-pro)")
         text_model_pro = None
 
     try:
         multimodal_model_pro = GenerativeModel("gemini-pro-vision")
     except:
         print("ERROR      GenerativeModel(gemini-pro-vision)")
+        st.write("ERROR      GenerativeModel(gemini-pro-vision)")
         multimodal_model_pro = None
     try:
         image_model = ImageGenerationModel.from_pretrained("imagegeneration@005")
     except:
         print("ERROR     ImageGenerationModel.from_pretrained(imagegeneration@005)")
+        st.write("ERROR     ImageGenerationModel.from_pretrained(imagegeneration@005)")
         image_model = None
 
     try:
@@ -51,6 +54,7 @@ def load_models():
         image2text_model = ImageTextModel.from_pretrained("imagetext@001")
     except:
         print("ERROR     ImageTextModel.from_pretrained(imagetext@001)")
+        st.write("ERROR     ImageTextModel.from_pretrained(imagetext@001)")
         image2text_model = None
 
     return text_model_pro, multimodal_model_pro, image_model, image2text_model
