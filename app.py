@@ -60,7 +60,7 @@ def load_models():
     return text_model_pro, multimodal_model_pro, image_model, image2text_model
 
 
-@st.cache_resource
+@st.cache_data
 def cache_data():
     from data import Story
     story = Story()
@@ -133,7 +133,7 @@ import data as data
 
 print("init page")
 
-st.header("Vertex AI Demo", divider="rainbow",)
+st.header("Fun AI v1", divider="rainbow",)
 text_model_pro, multimodal_model_pro, image_model, image2text_model = load_models()
 
 story_data = cache_data()
