@@ -45,16 +45,16 @@ def load_models():
     try:
         image_model = ImageGenerationModel.from_pretrained("imagen-3.0-fast-generate-001")
     except:
-        print("ERROR     ImageGenerationModel.from_pretrained(imagegeneration@005)")
-        st.write("ERROR     ImageGenerationModel.from_pretrained(imagegeneration@005)")
+        print("ERROR     ImageGenerationModel.from_pretrained(imagen-3.0-fast-generate-001)")
+        st.write("ERROR     ImageGenerationModel.from_pretrained(imagen-3.0-fast-generate-001)")
         image_model = None
 
     try:
         
-        image2text_model = ImageTextModel.from_pretrained("imagetext@001")
+        image2text_model = GenerativeModel("gemini-1.5-flash-002")
     except:
-        print("ERROR     ImageTextModel.from_pretrained(imagetext@001)")
-        st.write("ERROR     ImageTextModel.from_pretrained(imagetext@001)")
+        print("ERROR     ImageTextModel.from_pretrained(gemini-1.5-flash-002)")
+        st.write("ERROR     ImageTextModel.from_pretrained(gemini-1.5-flash-002)")
         image2text_model = None
 
     return text_model_pro, multimodal_model_pro, image_model, image2text_model
