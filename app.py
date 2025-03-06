@@ -30,16 +30,16 @@ st.set_page_config(layout="wide")
 @st.cache_resource
 def load_models():
     try:
-        text_model_pro = GenerativeModel("gemini-pro")
+        text_model_pro = GenerativeModel("gemini-1.5-flash-002")
     except:
-        print("ERROR  GenerativeModel(gemini-pro)")
-        st.write("ERROR  GenerativeModel(gemini-pro)")
+        print("ERROR  GenerativeModel(gemini-1.5-flash-002)")
+        st.write("ERROR  GenerativeModel(gemini-1.5-flash-002)")
         text_model_pro = None
 
     try:
-        multimodal_model_pro = GenerativeModel("gemini-pro-vision")
+        multimodal_model_pro = GenerativeModel("gemini-1.5-flash-002")
     except:
-        print("ERROR      GenerativeModel(gemini-pro-vision)")
+        print("ERROR      GenerativeModel(gemini-1.5-flash-002)")
         st.write("ERROR      GenerativeModel(gemini-pro-vision)")
         multimodal_model_pro = None
     try:
