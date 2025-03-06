@@ -43,7 +43,7 @@ def load_models():
         st.write("ERROR      GenerativeModel(gemini-pro-vision)")
         multimodal_model_pro = None
     try:
-        image_model = ImageGenerationModel.from_pretrained("imagegeneration@005")
+        image_model = ImageGenerationModel.from_pretrained("imagen-3.0-fast-generate-001")
     except:
         print("ERROR     ImageGenerationModel.from_pretrained(imagegeneration@005)")
         st.write("ERROR     ImageGenerationModel.from_pretrained(imagegeneration@005)")
